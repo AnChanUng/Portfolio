@@ -103,6 +103,39 @@
     });
   }
 
+  /* ---------- lightbox ---------- */
+  var lb = document.getElementById('lightbox');
+  var lbImage = document.getElementById('lbImage');
+  var lbCaption = document.getElementById('lbCaption');
+  var lastFocused = null;
+
+  function openLightbox(btn) {
+    lastFocused = btn;
+    lbImage.src = btn.getAttribute('data-full');
+    lbImage.alt = btn.querySelector('img').alt;
+    lbCaption.textContent = btn.getAttribute('data-caption') || '';
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lbClose').focus();
+  }
+  function closeLightbox() {
+    lb.hidden = true;
+    lbImage.src = '';
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  document.querySelectorAll('.gallery .shot').forEach(function (btn) {
+    btn.addEventListener('click', function () { openLightbox(btn); });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb || e.target.closest('.lb-figure') === null) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !lb.hidden) closeLightbox();
+  });
+
   /* ---------- active section in nav ---------- */
   var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
   var navAnchors = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));

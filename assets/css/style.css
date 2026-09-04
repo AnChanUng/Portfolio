@@ -246,6 +246,48 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
   background:var(--accent);opacity:.75;
 }
 
+/* ---------- project gallery ---------- */
+.gallery-label{
+  margin:22px 0 10px;font-family:var(--mono);font-size:11.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--txt-3);
+}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery .shot{
+  display:block;width:100%;padding:0;cursor:zoom-in;overflow:hidden;
+  border-radius:12px;border:1px solid var(--line);background:var(--surface-2);
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+}
+.gallery .shot:hover,.gallery .shot:focus-visible{
+  border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow);outline:none;
+}
+.gallery img{width:100%;height:104px;object-fit:cover;object-position:top center;background:#fff}
+.shot-cap{
+  display:block;padding:8px 10px;font-size:11.5px;line-height:1.35;color:var(--txt-2);
+  text-align:left;border-top:1px solid var(--line);
+}
+
+/* ---------- lightbox ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:28px;
+  background:rgba(6,8,13,.86);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  animation:lbIn .2s ease;
+}
+.lightbox[hidden]{display:none}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+.lb-figure{margin:0;max-width:min(1200px,100%);max-height:100%;display:flex;flex-direction:column;gap:12px}
+.lb-figure img{
+  max-width:100%;max-height:calc(100vh - 130px);object-fit:contain;
+  border-radius:12px;background:#fff;box-shadow:0 30px 70px -20px rgba(0,0,0,.7);
+}
+.lb-figure figcaption{color:#c9d2e2;font-size:13.5px;line-height:1.6;text-align:center;max-width:76ch;margin-inline:auto}
+.lb-close{
+  position:absolute;top:18px;right:18px;width:40px;height:40px;display:grid;place-items:center;
+  border-radius:11px;cursor:pointer;color:#e9edf5;
+  border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);
+  transition:background .2s,border-color .2s;
+}
+.lb-close:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.35)}
+
 /* ---------- skills ---------- */
 .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .skill-card{padding:24px}
@@ -333,6 +375,10 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
   }
   .nav-links.open{opacity:1;visibility:visible;transform:none}
   .nav-links a{padding:11px 14px;border-radius:10px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery img{height:96px}
+  .lightbox{padding:16px}
+  .lb-figure img{max-height:calc(100vh - 160px)}
   .timeline{padding-left:22px}
   .tl-marker{left:-22px}
   .proj,.card{padding:20px}

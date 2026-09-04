@@ -186,6 +186,34 @@
                 <li>이벤트 데이터를 미들웨어 서버에 TCP로 실시간 전송하는 모듈 개발, 소켓 프로그래밍 기반 바이너리 프로토콜 설계</li>
                 <li>서버 로그 자동 수집 및 SMS 알림 모니터링 시스템 구축</li>
               </ul>
+
+              <p class="gallery-label">플랫폼 구조</p>
+              <ul class="gallery">
+                <li>
+                  <button type="button" class="shot" data-full="assets/img/project/autonomous-platform-overview.png" data-caption="자율주행 관제 플랫폼 개념도 — 관제 플랫폼을 중심으로 GIS·빅데이터 시스템, 관제 운영자, 연구기업, 자율주행차·셔틀이 주고받는 정보 흐름">
+                    <img src="assets/img/project/autonomous-platform-overview-thumb.jpg" alt="자율주행 관제 플랫폼 개념도" loading="lazy" decoding="async">
+                    <span class="shot-cap">관제 플랫폼 개념도</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="shot" data-full="assets/img/project/autonomous-system-architecture.png" data-caption="시스템 구성도 — 내·외부 포털 WEB, 관제 APP, OpenAPI, 데이터 수집분석, Device 연계 서버의 이중화 구성과 DB·스토리지 연결">
+                    <img src="assets/img/project/autonomous-system-architecture-thumb.jpg" alt="자율주행 플랫폼 시스템 구성도" loading="lazy" decoding="async">
+                    <span class="shot-cap">시스템 구성도</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="shot" data-full="assets/img/project/autonomous-software-stack.png" data-caption="소프트웨어 스택 — 관제 플랫폼·데이터·연구 지원 영역별 서버에 올라가는 WAS(Tomcat), Apache, PostgreSQL, HBASE 등 구성 요소">
+                    <img src="assets/img/project/autonomous-software-stack-thumb.jpg" alt="자율주행 플랫폼 소프트웨어 스택 구성" loading="lazy" decoding="async">
+                    <span class="shot-cap">소프트웨어 스택</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="shot" data-full="assets/img/project/autonomous-v2x-flow.png" data-caption="V2X 통신 구조 — 차량의 Lidar·Radar·DGPS 등 센서와 자율주행 시스템이 WAVE·LTE로 센터의 IoT 플랫폼과 연결되는 경로">
+                    <img src="assets/img/project/autonomous-v2x-flow-thumb.jpg" alt="V2X 통신 구조도" loading="lazy" decoding="async">
+                    <span class="shot-cap">V2X 통신 구조</span>
+                  </button>
+                </li>
+              </ul>
             </article>
 
             <article class="card proj">
@@ -413,6 +441,16 @@
     </a>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" type="button" aria-label="닫기">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <figure class="lb-figure">
+    <img id="lbImage" src="" alt="">
+    <figcaption id="lbCaption"></figcaption>
+  </figure>
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>
