@@ -251,7 +251,9 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
   margin:22px 0 10px;font-family:var(--mono);font-size:11.5px;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;color:var(--txt-3);
 }
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+/* 가로로 긴 도식 한 장짜리 갤러리 — 폭을 도식 비율에 맞춰 제한한다 */
+.gallery-wide{grid-template-columns:minmax(0,580px)}
 .gallery .shot{
   display:block;width:100%;padding:0;cursor:zoom-in;overflow:hidden;
   border-radius:12px;border:1px solid var(--line);background:var(--surface-2);
@@ -260,7 +262,9 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
 .gallery .shot:hover,.gallery .shot:focus-visible{
   border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow);outline:none;
 }
-.gallery img{width:100%;height:104px;object-fit:cover;object-position:top center;background:#fff}
+.gallery img{width:100%;height:190px;object-fit:cover;object-position:top center;background:#fff}
+/* 가로로 긴 도식은 잘라내지 않고 전체가 보이게 한다 */
+.gallery-wide img{height:auto;object-fit:contain;padding:12px}
 .shot-cap{
   display:block;padding:8px 10px;font-size:11.5px;line-height:1.35;color:var(--txt-2);
   text-align:left;border-top:1px solid var(--line);
@@ -375,8 +379,9 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
   }
   .nav-links.open{opacity:1;visibility:visible;transform:none}
   .nav-links a{padding:11px 14px;border-radius:10px}
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .gallery img{height:96px}
+  .gallery{grid-template-columns:1fr}
+  .gallery img{height:170px}
+  .gallery-wide{grid-template-columns:1fr}
   .lightbox{padding:16px}
   .lb-figure img{max-height:calc(100vh - 160px)}
   .timeline{padding-left:22px}
