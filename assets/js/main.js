@@ -74,34 +74,6 @@
     if (e.key === 'Escape') closeMenu();
   });
 
-  /* ---------- count-up stats ---------- */
-  var counters = document.querySelectorAll('[data-count]');
-  function countUp(el) {
-    var target = parseInt(el.getAttribute('data-count'), 10);
-    var suffix = el.getAttribute('data-suffix') || '';
-    if (reduceMotion) { el.textContent = target + suffix; return; }
-    var start = performance.now();
-    var dur = 1400;
-    function step(now) {
-      var p = Math.min((now - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  if ('IntersectionObserver' in window) {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { countUp(entry.target); cio.unobserve(entry.target); }
-      });
-    }, { threshold: 0.6 });
-    counters.forEach(function (el) { cio.observe(el); });
-  } else {
-    counters.forEach(function (el) {
-      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
-    });
-  }
 
   /* ---------- lightbox ---------- */
   var lb = document.getElementById('lightbox');

@@ -308,21 +308,6 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
 .cert-name{font-weight:600;font-size:14.5px}
 .cert-date{font-family:var(--mono);font-size:12.5px;color:var(--txt-3)}
 
-/* ---------- contact ---------- */
-.section-contact{padding-bottom:110px}
-.contact-box{
-  text-align:center;padding:70px 32px;border-radius:26px;
-  border:1px solid var(--line);background:var(--surface);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  position:relative;overflow:hidden;
-}
-.contact-box::before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:radial-gradient(60% 80% at 50% 0%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%);
-}
-.contact-title{font-size:clamp(27px,4.4vw,44px);font-weight:800;letter-spacing:-.04em;margin-bottom:30px}
-.contact-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-
 /* ---------- footer ---------- */
 .footer{border-top:1px solid var(--line);padding:26px 0;background:color-mix(in srgb,var(--bg) 70%,transparent)}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;font-size:13px;color:var(--txt-3);font-family:var(--mono)}
@@ -375,7 +360,6 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
   .timeline{padding-left:22px}
   .tl-marker{left:-22px}
   .proj,.card{padding:20px}
-  .contact-box{padding:52px 20px}
   .footer-inner{flex-direction:column;gap:10px}
 }
 @media (max-width:430px){
