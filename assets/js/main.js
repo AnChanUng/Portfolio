@@ -24,7 +24,7 @@
 
   /* ---------- theme ----------
      초기값은 <head>의 인라인 스크립트가 이미 확정했다. */
-  if (!root.getAttribute('data-theme')) root.setAttribute('data-theme', 'dark');
+  if (!root.getAttribute('data-theme')) root.setAttribute('data-theme', 'light');
 
   var toggle = document.getElementById('themeToggle');
   if (toggle) {
