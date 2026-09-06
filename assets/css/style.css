@@ -194,21 +194,23 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
 [data-theme="light"] .about-card{background:rgba(255,255,255,.92)}
 .hero-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:14px;font-size:clamp(36px,4.6vw,54px);font-weight:800;letter-spacing:-.05em;line-height:1}
 .hero-en{font-family:var(--mono);font-size:clamp(12px,1vw,14px);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-3)}
-.hero-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px}
-.hero-links a{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12.5px;color:var(--txt-2);transition:color .2s}
-.hero-links a:hover{color:var(--accent)}
-.hero-photo{width:clamp(160px,17vw,220px);border-radius:20px;padding:5px;border:1px solid var(--line);background:var(--surface-2)}
+.about-side{display:flex;flex-direction:column;align-items:stretch;gap:14px;width:clamp(160px,17vw,220px)}
+.hero-photo{border-radius:20px;padding:5px;border:1px solid var(--line);background:var(--surface-2)}
+.side-links{display:flex;flex-direction:column;gap:6px}
+.side-links a{display:flex;align-items:center;gap:9px;padding:9px 12px;border-radius:11px;border:1px solid var(--line);background:var(--surface-2);font-size:13px;font-weight:600;color:var(--txt-2);transition:color .2s,border-color .2s,background .2s,transform .2s}
+.side-links a:hover{color:var(--txt);border-color:var(--line-strong);background:var(--surface);transform:translateY(-1px)}
+.side-links svg{flex:none;color:var(--accent)}
 .hero-photo img{width:100%;height:auto;border-radius:15px;object-fit:cover}
 
 /* 이력서식 목록 */
-.cv{margin-top:30px;display:flex;flex-direction:column}
-.cv-block{display:grid;grid-template-columns:88px minmax(0,1fr);gap:18px;padding:16px 0;border-top:1px solid var(--line)}
-.cv-block h2{margin:0;padding-top:3px;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.cv-block ul{display:flex;flex-direction:column;gap:7px}
+.cv{margin-top:26px;display:flex;flex-direction:column}
+.cv-block{display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+.cv-block h2{margin:0;padding-top:2px;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.cv-block ul{display:flex;flex-direction:column;gap:5px}
 .cv-block li{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-.cv-t{font-size:15px;font-weight:600;color:var(--txt);letter-spacing:-.02em}
+.cv-t{font-size:13.5px;font-weight:600;color:var(--txt);letter-spacing:-.02em}
 .cv-t em{font-style:normal;font-weight:400;color:var(--txt-2);margin-left:6px}
-.cv-d{flex:none;font-family:var(--mono);font-size:12px;color:var(--txt-3)}
+.cv-d{flex:none;font-family:var(--mono);font-size:11.5px;color:var(--txt-3)}
 
 /* ---------- sections ---------- */
 .section{padding:112px 0}
@@ -328,7 +330,9 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
 /* ---------- responsive ---------- */
 @media (max-width:960px){
   .about-card{grid-template-columns:1fr;gap:28px;padding:30px}
-  .hero-photo{order:-1;width:150px}
+  .about-side{order:-1;width:100%;flex-direction:row;align-items:flex-start;gap:16px}
+  .hero-photo{width:140px;flex:none}
+  .side-links{flex:1}
   .par{grid-template-columns:1fr}
   .par > div{border-right:0;border-bottom:1px solid var(--line)}
   .par > div:last-child{border-bottom:0}
