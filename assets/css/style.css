@@ -196,7 +196,7 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
 .hero-en{font-family:var(--mono);font-size:clamp(12px,1vw,14px);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--txt-3)}
 .about-side{display:flex;flex-direction:column;align-items:stretch;gap:14px;width:clamp(160px,17vw,220px)}
 .hero-photo{border-radius:20px;padding:5px;border:1px solid var(--line);background:var(--surface-2)}
-.side-links{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.side-links{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 .sl{--b:var(--accent);display:flex;flex-direction:column;align-items:center;gap:7px;padding:11px 4px 9px;border-radius:14px;border:1px solid var(--line);background:var(--surface-2);transition:transform .22s cubic-bezier(.2,.8,.3,1),border-color .22s,box-shadow .22s,background .22s}
 .sl-gh{--b:#24292f}
 .sl-blog{--b:#eb531f}
@@ -325,6 +325,7 @@ mark{background:var(--mark);color:inherit;border-radius:4px;padding:.05em .3em;f
 .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .skill-card{padding:24px}
 .skill-card:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.skill-focus{grid-column:1 / -1;border-color:color-mix(in srgb,var(--accent) 35%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 8%,var(--surface)),color-mix(in srgb,var(--accent-2) 8%,var(--surface)))}
 .skill-card h3{font-size:13px;margin-bottom:14px}
 .skill-card .k{font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);font-weight:600}
 
