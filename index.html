@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>안찬웅 · Server Developer</title>
-<meta name="description" content="비즈니스 관점에서의 문제를 기술로 풀어나가는 서버 개발자, 안찬웅의 포트폴리오입니다.">
+<title>안찬웅 · Backend Engineer</title>
+<meta name="description" content="서버 개발자 안찬웅의 포트폴리오. C/C++ · Java/Spring · Linux · RDBMS.">
 <meta name="author" content="안찬웅">
-<meta property="og:title" content="안찬웅 · Server Developer">
-<meta property="og:description" content="비즈니스 관점에서의 문제를 기술로 풀어나가는 서버 개발자">
+<meta property="og:title" content="안찬웅 · Backend Engineer">
+<meta property="og:description" content="서버 개발자 안찬웅의 포트폴리오">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anchanung.github.io/">
 <meta property="og:image" content="https://anchanung.github.io/assets/img/profile.png">
@@ -17,10 +17,10 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑‍💻</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.work-card[hidden]{display:none!important}</style></noscript>
 <script>
 /* 첫 페인트 전에 테마를 확정해 깜빡임을 막는다 */
 (function(){try{var t=localStorage.getItem('theme');if(!t)t='light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -45,11 +45,15 @@
     </a>
     <nav class="nav-links" aria-label="섹션 이동">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
     </nav>
     <div class="nav-actions">
+      <a class="nav-cta" href="assets/resume_anchanung.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></svg>
+        Resume
+      </a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="테마 전환">
         <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 7.2 7.2M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/></svg>
         <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.4 8.4 0 1 0 10.4 10.4Z"/></svg>
@@ -61,274 +65,188 @@
 
 <main id="top">
 
-  <!-- ─────────────── HERO ─────────────── -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow reveal"><span class="pulse"></span> Server Developer</p>
-        <h1 class="hero-title reveal" data-delay="1">
-          안녕하세요.<br>
-          <span class="grad">안찬웅</span>입니다.
-        </h1>
-        <p class="hero-lead reveal" data-delay="2">
-          비즈니스 관점에서의 문제를 기술로 풀어나가는 서버 개발자입니다.<br>
-          문제를 해결할 때 <b>성능</b>, <b>안정성</b>, <b>비용</b>을 고려해 최선의 해결책을 선택합니다.
-        </p>
-        <div class="hero-cta reveal" data-delay="3">
-          <a class="btn btn-primary" href="#experience">
-            프로젝트 보기
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+  <!-- ─────────────── ABOUT ─────────────── -->
+  <section id="about" class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div class="hero-name">
+          <h1 class="hero-title reveal">안찬웅<span class="hero-en">AnChanUng · Backend Engineer</span></h1>
+          <ul class="hero-links reveal" data-delay="1">
+            <li><a href="https://github.com/AnChanUng" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>github.com/AnChanUng</a></li>
+            <li><a href="https://cookie.tistory.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h9L20 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5Z"/><path d="M14 4v6h6M8 13.5h8M8 17h5"/></svg>cookie.tistory.com</a></li>
+            <li><a href="assets/resume_anchanung.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></svg>이력서 PDF</a></li>
+          </ul>
         </div>
-        <div class="hero-links reveal" data-delay="4">
-          <a class="link-card" href="https://github.com/AnChanUng" target="_blank" rel="noopener" aria-label="GitHub 프로필 새 탭에서 열기">
-            <span class="lc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
-            </span>
-            <span class="lc-text">
-              <span class="lc-title">GitHub</span>
-              <span class="lc-sub">github.com/AnChanUng</span>
-            </span>
-            <svg class="lc-arrow" aria-hidden="true" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-          <a class="link-card lc-blog" href="https://cookie.tistory.com/" target="_blank" rel="noopener" aria-label="기술 블로그 새 탭에서 열기">
-            <span class="lc-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h9L20 9.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5Z"/><path d="M14 4v6h6M8 13.5h8M8 17h5"/></svg>
-            </span>
-            <span class="lc-text">
-              <span class="lc-title">기술 블로그</span>
-              <span class="lc-sub">cookie.tistory.com</span>
-            </span>
-            <svg class="lc-arrow" aria-hidden="true" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
+        <div class="hero-photo reveal" data-delay="1">
+          <img src="assets/img/profile.png" alt="안찬웅 프로필 사진" width="290" height="397" loading="eager" decoding="async">
         </div>
       </div>
+      <dl class="spec reveal" data-delay="2">
+        <div><dt>학력</dt><dd>단국대학교<br>소프트웨어학과<span>2024.02 학사 졸업</span></dd></div>
+        <div><dt>경력</dt><dd>Server Developer<br>1년 4개월<span>데이터스트림즈 · (주)에스앤디</span></dd></div>
+        <div><dt>자격증</dt><dd>AWS SAA-C03<br>정보처리기사<span>SQLD · ADsP</span></dd></div>
+        <div><dt>교육</dt><dd>삼성청년<br>SW·AI아카데미 16기<span>2026.07 ~ 진행중</span></dd></div>
+      </dl>
+      <a class="hero-down" href="#work" aria-label="포트폴리오로 이동">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+      </a>
     </div>
   </section>
 
-  <!-- ─────────────── ABOUT ─────────────── -->
-  <section id="about" class="section">
+  <!-- ─────────────── WORK ─────────────── -->
+  <section id="work" class="section">
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="sec-num">01</span>
-        <h2>About</h2>
-        <p class="sec-sub">어떤 개발자인가</p>
+        <h2>Work</h2>
+        <p class="sec-sub">실무 프로젝트</p>
       </div>
 
-      <div class="about-intro card reveal">
-        <div class="about-main">
-          <div class="about-id">
-            <div class="about-photo">
-              <img src="assets/img/profile.png" alt="안찬웅 프로필 사진" width="290" height="397" loading="lazy" decoding="async">
-            </div>
-            <div class="about-id-text">
-              <h3>안찬웅 <span class="about-en">AnChanUng</span></h3>
-              <p class="about-role">Server Developer</p>
-              <ul class="chips sm">
-                <li>C / C++</li><li>Linux · Unix</li><li>RDBMS</li><li>Java · Spring</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="about-body">
-            <p>
-              단국대학교 소프트웨어학과를 졸업하고 <b>ETL 솔루션</b>과 <b>자율주행 관제 플랫폼</b>을 만드는 두 회사에서
-              서버 개발자로 일했습니다. C·C++로 Linux·Unix 위에서 도는 데이터 처리 엔진을 다뤄 왔고,
-              문제가 생기면 로그 한 줄에서 시작해 드라이버·커널 파라미터까지 내려가 원인을 좁히는 방식으로 해결합니다.
-            </p>
-            <p>
-              데이터스트림즈에는 인턴으로 입사해 수년간 쌓인 레거시를 걷어내며 <mark>고객사 버그 70건을 모두 해결</mark>하고
-              정규직으로 전환됐습니다. 5년 넘게 원인이 밝혀지지 않던 PostgreSQL ODBC 접속 오류는 재현 환경부터 다시 만들어
-              DSN 캐싱이라는 근본 원인을 짚어냈고, 예약 실행의 CRON 파싱 구조를 바꿔 <mark>성능을 60% 끌어올렸습니다</mark>.
-              세마포어·세션 수 기본값이 병목이라는 걸 찾아 배치 처리 시간을 40% 줄인 것도 같은 방식이었습니다.
-            </p>
-            <p>
-              에스앤디에서는 경기도 자율주행 플랫폼의 83개 솔루션을 정기점검하며,
-              장애가 나면 로그를 분석해 원인 범위를 좁히고 담당 업체와 협의해 마무리했습니다.
-              TCP 소켓 기반 실시간 전송 모듈과 로그 자동 수집·SMS 알림 모니터링 시스템도 직접 만들었습니다.
-              지금은 삼성청년 SW·AI아카데미에서 Java와 Spring 기반 웹 개발을 다시 다지고 있습니다.
-            </p>
-          </div>
-        </div>
-
-        <aside class="about-facts">
-          <h4 class="facts-title">Profile</h4>
-          <dl class="facts-list">
-            <div><dt>실무 경력</dt><dd>약 1년 4개월<span class="facts-note">2025.02 ~ 2026.06</span></dd></div>
-            <div><dt>최근 소속</dt><dd>(주)에스앤디<span class="facts-note">Server Developer</span></dd></div>
-            <div><dt>이전 소속</dt><dd>데이터스트림즈<span class="facts-note">인턴 → 정규직</span></dd></div>
-            <div><dt>학력</dt><dd>단국대학교 소프트웨어학과<span class="facts-note">2024.02 학사 졸업</span></dd></div>
-            <div><dt>현재</dt><dd>삼성청년 SW·AI아카데미 16기<span class="facts-note">2026.07 ~ 진행중</span></dd></div>
-            <div><dt>자격증</dt><dd>AWS SAA-C03 · ADsP<span class="facts-note">정보처리기사 · SQLD</span></dd></div>
-            <div><dt>도메인</dt><dd>ETL · 자율주행 관제<span class="facts-note">데이터 처리 · 공공 플랫폼</span></dd></div>
-          </dl>
-        </aside>
+      <div class="filter reveal" role="tablist" aria-label="프로젝트 분류">
+        <button type="button" class="chip-btn is-on" data-filter="all" role="tab" aria-selected="true">전체</button>
+        <button type="button" class="chip-btn" data-filter="perf" role="tab" aria-selected="false">성능</button>
+        <button type="button" class="chip-btn" data-filter="debug" role="tab" aria-selected="false">디버깅</button>
+        <button type="button" class="chip-btn" data-filter="security" role="tab" aria-selected="false">보안</button>
+        <button type="button" class="chip-btn" data-filter="network" role="tab" aria-selected="false">네트워크·운영</button>
       </div>
 
-      <div class="about-grid">
-        <article class="card about-card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z"/></svg>
+      <div class="work-list" id="workList">
+
+        <!-- 1. CRON -->
+        <article class="card work-card reveal" id="p-cron" data-tags="perf">
+          <div class="wc-top">
+            <div class="wc-meta">
+              <span class="tag tag-perf">Performance</span>
+              <span class="wc-org">데이터스트림즈 · TeraStream</span>
+            </div>
+            <div class="wc-metric"><b>+60%</b><span>평균 성능</span></div>
           </div>
-          <h3>주도적으로 만듭니다</h3>
-          <p>스타트업에서 치열함과 주도성을 배웠습니다. 프로젝트를 직접 기획하고 개발하며 살아있음을 느낍니다.</p>
+          <h3>예약 실행 엔진 CRON 파싱 구조 개선</h3>
+          <p class="wc-lead">매 실행마다 문자열을 파싱하던 스케줄러를 사전 파싱 + 공유 메모리 구조로 바꿔 성능을 평균 60% 끌어올리고, 다중 실행 환경의 스케줄 정확성을 확보했습니다.</p>
+          <div class="par">
+            <div><h4>Problem</h4><p>CRON 타입 예약 데이터를 실행 시점마다 문자열로 파싱해 불필요한 메모리 연산이 반복. 병렬 처리 중 로그 불일치도 발생.</p></div>
+            <div><h4>Approach</h4><p>예약 데이터를 사전 파싱해 숫자 형식으로 공유 메모리에 저장. 공유 메모리 초기화 로직을 수정해 다중 실행 환경에서도 스케줄이 정확히 동작하도록 개선.</p></div>
+            <div><h4>Result</h4><p>성능 평균 60% 향상. 병렬 처리 로그 불일치 수정으로 안정성 확보.</p></div>
+          </div>
+          <ul class="chips"><li>C</li><li>Shared Memory</li><li>Linux</li><li>Unix</li></ul>
         </article>
 
-        <article class="card about-card reveal" data-delay="1">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5 9.5 13l3 3L20 8.5"/><path d="M15 8.5h5v5"/></svg>
-          </div>
-          <h3>끝까지 내려가 봅니다</h3>
-          <p>증상에서 멈추지 않고 재현 환경을 만들어 원인을 확인합니다. 5년 된 접속 오류도, 32/64bit 빌드 차이도 그렇게 찾았습니다.</p>
-        </article>
-
-        <article class="card about-card reveal" data-delay="2">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4v1.2A4.5 4.5 0 0 1 12 16a4.5 4.5 0 0 1-4-7.8V7a4 4 0 0 1 4-4Z"/><path d="M9.5 19h5M10 21.5h4"/></svg>
-          </div>
-          <h3>반복은 자동화합니다</h3>
-          <p>수동 암호화 작업을 자동 생성 구조로 바꾸고, 점검 로그 수집과 알림을 시스템에 맡깁니다. 사람은 판단만 하면 되도록 만듭니다.</p>
-        </article>
-
-        <article class="card about-card reveal" data-delay="3">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.5h17.6M3.2 14.5h17.6M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
-          </div>
-          <h3>넓게 배웁니다</h3>
-          <p>새로운 기술과 컨퍼런스를 좋아하고, 다양한 직군과 소통하며 각 분야의 관점을 공부하는 것을 즐깁니다.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─────────────── EXPERIENCE ─────────────── -->
-  <section id="experience" class="section">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="sec-num">02</span>
-        <h2>Experience</h2>
-        <p class="sec-sub">직무 경험과 문제 해결 기록</p>
-      </div>
-
-      <div class="timeline">
-
-        <!-- 에스앤디 -->
-        <div class="tl-item reveal">
-          <div class="tl-marker"><span></span></div>
-          <div class="tl-body">
-            <div class="job-head">
-              <h3 class="job-company">(주)에스앤디</h3>
-              <span class="job-period">2026.01 ~ 2026.06</span>
+        <!-- 2. 암호화 -->
+        <article class="card work-card reveal" id="p-encrypt" data-tags="security perf">
+          <div class="wc-top">
+            <div class="wc-meta">
+              <span class="tag tag-sec">Security</span>
+              <span class="tag tag-perf">Performance</span>
+              <span class="wc-org">데이터스트림즈 · TeraStream</span>
             </div>
-            <p class="job-role">Server Developer <em>·</em> 계약직</p>
-            <ul class="chips">
-              <li>Linux</li><li>C</li><li>JSP</li><li>MariaDB</li><li>PostgreSQL</li>
-            </ul>
-
-            <article class="card proj">
-              <h4>경기도 자율주행 플랫폼 유지보수 및 개발</h4>
-              <ul class="bullets">
-                <li>83개 솔루션 월별 정기점검, 장애 시 로그 분석 후 원인 범위를 좁혀 해당 업체와 협의하여 해결</li>
-                <li>이벤트 데이터를 미들웨어 서버에 TCP로 실시간 전송하는 모듈 개발, 소켓 프로그래밍 기반 바이너리 프로토콜 설계</li>
-                <li>서버 로그 자동 수집 및 SMS 알림 모니터링 시스템 구축</li>
-              </ul>
-
-              <p class="gallery-label">플랫폼 구조</p>
-              <ul class="gallery">
-                <li>
-                  <button type="button" class="shot" data-full="assets/img/project/autonomous-platform-overview.png" data-caption="자율주행 관제 플랫폼 개념도 — 관제 플랫폼을 중심으로 GIS·빅데이터 시스템, 관제 운영자, 연구기업, 자율주행차·셔틀이 주고받는 정보 흐름">
-                    <img src="assets/img/project/autonomous-platform-overview-thumb.jpg" alt="자율주행 관제 플랫폼 개념도" loading="lazy" decoding="async">
-                    <span class="shot-cap">관제 플랫폼 개념도</span>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="shot" data-full="assets/img/project/autonomous-system-architecture.png" data-caption="시스템 구성도 — 내·외부 포털 WEB, 관제 APP, OpenAPI, 데이터 수집분석, Device 연계 서버의 이중화 구성과 DB·스토리지 연결">
-                    <img src="assets/img/project/autonomous-system-architecture-thumb.jpg" alt="자율주행 플랫폼 시스템 구성도" loading="lazy" decoding="async">
-                    <span class="shot-cap">시스템 구성도</span>
-                  </button>
-                </li>
-              </ul>
-            </article>
+            <div class="wc-metric"><b>−30%</b><span>배치 처리 시간</span></div>
           </div>
-        </div>
+          <h3>Tibero 접속 정보 자동 암호화 프로세스</h3>
+          <p class="wc-lead">금감원 보안 점검 대응. 계정별로 수동 생성하던 암호화 파일을 자동 생성 구조로 바꾸고, 그 과정에서 커널·DB 기본값 병목까지 잡아 배치 시간을 30% 줄였습니다.</p>
+          <div class="par">
+            <div><h4>Problem</h4><p>DB 접속 비밀번호가 평문으로 노출. 기존에는 계정마다 암호화 파일을 수동 생성해야 했고 금감원 보안 점검 대상.</p></div>
+            <div><h4>Approach</h4><p>계정·DB 버전을 자동 판별해 암호화 모듈을 생성하는 구조 설계. 환경 변수가 삭제돼도 런타임에 자동 생성되도록 보강. 대규모 배치에서 Linux 커널 세마포어(128)와 Tibero 세션 수(50) 기본값이 병목임을 확인해 각각 3배 확대.</p></div>
+            <div><h4>Result</h4><p>정합성 검증 로직을 포함한 배치로 완성, 금감원 보안 점검 통과. 배치 처리 시간 약 30% 단축.</p></div>
+          </div>
+          <ul class="chips"><li>C</li><li>Tibero</li><li>Linux Kernel</li><li>Batch</li></ul>
+        </article>
 
-        <!-- 데이터스트림즈 -->
-        <div class="tl-item reveal">
-          <div class="tl-marker"><span></span></div>
-          <div class="tl-body">
-            <div class="job-head">
-              <h3 class="job-company">데이터스트림즈</h3>
-              <span class="job-period">2025.02 ~ 2025.11</span>
+        <!-- 3. ODBC -->
+        <article class="card work-card reveal" id="p-odbc" data-tags="debug">
+          <div class="wc-top">
+            <div class="wc-meta">
+              <span class="tag tag-dbg">Debugging</span>
+              <span class="wc-org">데이터스트림즈 · TeraStream</span>
             </div>
-            <p class="job-role">Server Developer <em>·</em> 인턴 → 정규직</p>
-            <ul class="chips">
-              <li>Linux</li><li>Unix</li><li>C</li><li>C++</li><li>Oracle</li><li>MySQL</li><li>PostgreSQL</li><li>Tibero</li>
-            </ul>
-
-            <article class="card proj">
-              <h4>ETL 솔루션 TeraStream 유지보수 및 신규 기능 개발</h4>
-              <ul class="bullets">
-                <li>인턴으로 입사해 수년간 쌓인 레거시 코드를 개선하고 <mark>고객사 70개 버그를 모두 해결</mark></li>
-              </ul>
-
-              <p class="gallery-label">솔루션 구조</p>
-              <ul class="gallery gallery-wide">
-                <li>
-                  <button type="button" class="shot" data-full="assets/img/project/terastream-etl-flow.png" data-caption="TeraStream ETL 처리 흐름 — DBMS·XML/CSV 파일·Hadoop 등 소스 시스템의 데이터를 추출·정제·변환해 타깃 시스템으로 적재하는 구조">
-                    <img src="assets/img/project/terastream-etl-flow-thumb.jpg" alt="TeraStream ETL 처리 흐름도" width="720" height="372" loading="lazy" decoding="async">
-                    <span class="shot-cap">TeraStream ETL 처리 흐름</span>
-                  </button>
-                </li>
-              </ul>
-            </article>
-
-            <article class="card proj">
-              <h4>Tibero 자동 암호화 프로세스 개발</h4>
-              <p class="proj-sub">금감원 보안 점검 대응, 수동 암호화를 자동화하여 통과</p>
-              <ul class="bullets">
-                <li>DB 접속 비밀번호 평문 노출, 기존에는 계정별 암호화 파일을 수동 생성</li>
-                <li>계정/DB 버전을 자동 판별해 암호화 모듈이 자동 생성되는 구조 설계</li>
-                <li>테스트 중 환경 변수 삭제 시 런타임에서 자동 생성되도록 로직 추가</li>
-                <li>대규모 배치 작업에서 Linux 커널 세마포어(128)와 Tibero 세션 수(50) 기본값 제한으로 병목 발생 확인, 각각 3배 확대하여 <mark>처리 시간 약 40% 단축</mark></li>
-                <li>정합성 검증 로직 구현 후 배치 형태로 완성, 금감원 보안 점검 통과</li>
-              </ul>
-            </article>
-
-            <article class="card proj">
-              <h4>예약 실행 기능 성능 최적화 및 안정성 개선</h4>
-              <p class="proj-sub">CRON 파싱 구조를 변경하여 성능 60% 향상, 배치 병목 40% 단축</p>
-              <ul class="bullets">
-                <li>CRON 타입 예약 데이터를 매번 문자열로 파싱하는 구조에서 불필요한 메모리 연산 반복 발생</li>
-                <li>사전 파싱 후 공유 메모리에 숫자 형식으로 저장하는 방식으로 구조 변경, <mark>성능 평균 60% 향상</mark></li>
-                <li>공유 메모리 초기화 로직을 수정하여 다중 실행 환경에서도 예약 스케줄이 정확히 동작하도록 개선</li>
-                <li>병렬 처리 중 로그 불일치 문제를 수정하여 안정성 향상</li>
-              </ul>
-            </article>
-
-            <article class="card proj">
-              <h4>PostgreSQL ODBC 5년 미해결 버그 해결</h4>
-              <p class="proj-sub">5년간 원인 불명이던 접속 오류를 4시간 만에 근본 해결</p>
-              <ul class="bullets">
-                <li>웹 클라이언트에서 특정 계정 접속 시 간헐적으로 연결 실패하는 현상. 5년 이상 원인 미규명</li>
-                <li>동일 환경을 재현하여 ODBC DSN 값이 캐싱되며 잘못된 자격증명이 적용되는 구조를 밝혀냄</li>
-                <li>32/64bit 및 User/System DSN 중복으로 동일 이름의 DSN이 서로 다른 계정 정보를 갖는 문제 확인</li>
-                <li>클라이언트 단 에러 처리 로직을 추가해 문제를 근본적으로 해결</li>
-              </ul>
-            </article>
-
-            <article class="card proj">
-              <h4>Tibero TIMESTAMP 구조체 불일치 해결</h4>
-              <p class="proj-sub">구조체를 직접 분석하고 문제를 해결함</p>
-              <ul class="bullets">
-                <li>Tibero ODBC 기본 타입과 CLI 타입의 크기 불일치로 TIMESTAMP 데이터 정합성이 깨지는 현상 발생</li>
-                <li>ODBC 드라이버의 타입 크기 불일치를 발견하고 호환 레이어를 구현하여 해결</li>
-                <li>Linux에서는 정상 동작했지만 AIX 환경에서 애플리케이션이 32비트 모드로 빌드되어 long이 4바이트로 처리되는 것을 확인</li>
-              </ul>
-            </article>
+            <div class="wc-metric"><b>5y → 4h</b><span>근본 원인 규명</span></div>
           </div>
-        </div>
+          <h3>PostgreSQL ODBC 5년 미해결 접속 오류</h3>
+          <p class="wc-lead">5년 넘게 원인을 못 찾던 간헐적 접속 실패를 재현 환경부터 다시 만들어 4시간 만에 DSN 캐싱 문제로 특정하고 근본 해결했습니다.</p>
+          <div class="par">
+            <div><h4>Problem</h4><p>웹 클라이언트에서 특정 계정으로 접속할 때 간헐적으로 연결 실패. 5년 이상 원인 미규명 상태로 남아 있던 이슈.</p></div>
+            <div><h4>Approach</h4><p>동일 환경을 재현해 ODBC DSN 값이 캐싱되며 잘못된 자격증명이 적용되는 구조를 확인. 32/64bit 및 User/System DSN이 중복돼 같은 이름의 DSN이 서로 다른 계정 정보를 갖는 것이 원인.</p></div>
+            <div><h4>Result</h4><p>클라이언트 단 에러 처리 로직을 추가해 근본 해결. 재발 없음.</p></div>
+          </div>
+          <ul class="chips"><li>C++</li><li>ODBC</li><li>PostgreSQL</li><li>Windows DSN</li></ul>
+        </article>
+
+        <!-- 4. TIMESTAMP -->
+        <article class="card work-card reveal" id="p-timestamp" data-tags="debug">
+          <div class="wc-top">
+            <div class="wc-meta">
+              <span class="tag tag-dbg">Debugging</span>
+              <span class="wc-org">데이터스트림즈 · TeraStream</span>
+            </div>
+            <div class="wc-metric"><b>AIX 32bit</b><span>이식성 결함 해결</span></div>
+          </div>
+          <h3>Tibero TIMESTAMP 구조체 크기 불일치</h3>
+          <p class="wc-lead">Linux에서는 멀쩡하던 TIMESTAMP 정합성이 AIX에서만 깨지는 문제를 ODBC 타입 크기와 32bit 빌드의 long 크기 차이로 좁혀 호환 레이어로 해결했습니다.</p>
+          <div class="par">
+            <div><h4>Problem</h4><p>Tibero ODBC 기본 타입과 CLI 타입의 크기 불일치로 TIMESTAMP 데이터 정합성이 깨짐. Linux 정상, AIX에서만 재현.</p></div>
+            <div><h4>Approach</h4><p>구조체를 직접 분석해 드라이버 타입 크기 불일치를 확인. AIX 환경에서 애플리케이션이 32비트 모드로 빌드되어 long이 4바이트로 처리되는 것을 특정.</p></div>
+            <div><h4>Result</h4><p>타입 호환 레이어를 구현해 플랫폼 간 정합성 확보.</p></div>
+          </div>
+          <ul class="chips"><li>C</li><li>ODBC</li><li>Tibero</li><li>AIX</li></ul>
+        </article>
+
+        <!-- 5. 자율주행 -->
+        <article class="card work-card reveal" id="p-autonomous" data-tags="network">
+          <div class="wc-top">
+            <div class="wc-meta">
+              <span class="tag tag-net">Network</span>
+              <span class="tag tag-ops">Ops</span>
+              <span class="wc-org">에스앤디 · 경기도 자율주행 플랫폼</span>
+            </div>
+            <div class="wc-metric"><b>83</b><span>솔루션 운영</span></div>
+          </div>
+          <h3>자율주행 관제 플랫폼 실시간 전송 모듈·모니터링</h3>
+          <p class="wc-lead">83개 솔루션을 월별 점검하며 장애를 처리하고, 이벤트 데이터를 미들웨어로 실시간 전송하는 TCP 모듈과 로그 자동 수집·SMS 알림 시스템을 직접 만들었습니다.</p>
+          <div class="par">
+            <div><h4>Problem</h4><p>다수 업체가 납품한 83개 솔루션이 한 플랫폼에 얽혀 있어 장애 원인 범위를 좁히기 어렵고, 이벤트 데이터의 실시간 전달 경로가 필요.</p></div>
+            <div><h4>Approach</h4><p>소켓 프로그래밍 기반 바이너리 프로토콜을 설계해 이벤트를 미들웨어 서버에 TCP로 실시간 전송. 서버 로그 자동 수집과 SMS 알림 모니터링을 구축. 장애 시 로그 분석으로 범위를 좁힌 뒤 담당 업체와 협의.</p></div>
+            <div><h4>Result</h4><p>월별 정기점검 체계 확립. 장애 감지가 사람 눈에서 알림으로 이동.</p></div>
+          </div>
+          <ul class="chips"><li>C</li><li>TCP Socket</li><li>Binary Protocol</li><li>Linux</li><li>MariaDB</li><li>PostgreSQL</li><li>JSP</li></ul>
+          <ul class="gallery">
+            <li>
+              <button type="button" class="shot" data-full="assets/img/project/autonomous-platform-overview.png" data-caption="자율주행 관제 플랫폼 개념도 — 관제 플랫폼을 중심으로 GIS·빅데이터 시스템, 관제 운영자, 연구기업, 자율주행차·셔틀이 주고받는 정보 흐름">
+                <img src="assets/img/project/autonomous-platform-overview-thumb.jpg" alt="자율주행 관제 플랫폼 개념도" loading="lazy" decoding="async">
+                <span class="shot-cap">관제 플랫폼 개념도</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="shot" data-full="assets/img/project/autonomous-system-architecture.png" data-caption="시스템 구성도 — 내·외부 포털 WEB, 관제 APP, OpenAPI, 데이터 수집분석, Device 연계 서버의 이중화 구성과 DB·스토리지 연결">
+                <img src="assets/img/project/autonomous-system-architecture-thumb.jpg" alt="자율주행 플랫폼 시스템 구성도" loading="lazy" decoding="async">
+                <span class="shot-cap">시스템 구성도</span>
+              </button>
+            </li>
+          </ul>
+        </article>
+
+        <!-- 6. TeraStream -->
+        <article class="card work-card reveal" id="p-terastream" data-tags="debug">
+          <div class="wc-top">
+            <div class="wc-meta">
+              <span class="tag tag-dbg">Reliability</span>
+              <span class="wc-org">데이터스트림즈 · TeraStream</span>
+            </div>
+            <div class="wc-metric"><b>70건</b><span>버그 전량 해결</span></div>
+          </div>
+          <h3>ETL 엔진 TeraStream 레거시 개선</h3>
+          <p class="wc-lead">인턴으로 입사해 수년간 쌓인 레거시 코드를 걷어내며 고객사 버그 70건을 모두 해결했고, 정규직으로 전환됐습니다. DBMS·파일·Hadoop 소스를 추출·정제·변환해 적재하는 엔진의 C/C++ 코어를 다뤘습니다.</p>
+          <ul class="chips"><li>C</li><li>C++</li><li>Oracle</li><li>MySQL</li><li>PostgreSQL</li><li>Tibero</li><li>Unix</li></ul>
+          <ul class="gallery gallery-wide">
+            <li>
+              <button type="button" class="shot" data-full="assets/img/project/terastream-etl-flow.png" data-caption="TeraStream ETL 처리 흐름 — DBMS·XML/CSV 파일·Hadoop 등 소스 시스템의 데이터를 추출·정제·변환해 타깃 시스템으로 적재하는 구조">
+                <img src="assets/img/project/terastream-etl-flow-thumb.jpg" alt="TeraStream ETL 처리 흐름도" width="720" height="372" loading="lazy" decoding="async">
+                <span class="shot-cap">TeraStream ETL 처리 흐름</span>
+              </button>
+            </li>
+          </ul>
+        </article>
 
       </div>
+      <p class="work-empty" id="workEmpty" hidden>해당 분류의 프로젝트가 없습니다.</p>
     </div>
   </section>
 
@@ -336,35 +254,27 @@
   <section id="skills" class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-num">03</span>
+        <span class="sec-num">02</span>
         <h2>Skills</h2>
         <p class="sec-sub">실무에서 사용한 기술</p>
       </div>
 
       <div class="skill-grid">
         <article class="card skill-card reveal">
-          <h3><span class="k">Backend</span></h3>
-          <p class="skill-sub">Language</p>
-          <ul class="chips lg"><li>Java</li><li>C</li><li>C++</li></ul>
-          <p class="skill-sub">Framework</p>
-          <ul class="chips lg"><li>Spring</li></ul>
-          <p class="skill-sub">Database</p>
-          <ul class="chips lg"><li>Oracle</li><li>PostgreSQL</li><li>MySQL</li><li>MariaDB</li><li>Tibero</li></ul>
+          <h3><span class="k">Language & Framework</span></h3>
+          <ul class="chips lg"><li class="hi">C</li><li class="hi">C++</li><li class="hi">Java</li><li class="hi">Spring</li><li>JSP</li></ul>
         </article>
         <article class="card skill-card reveal" data-delay="1">
-          <h3><span class="k">DevOps</span></h3>
-          <p class="skill-sub">OS</p>
-          <ul class="chips lg"><li>Linux</li><li>Unix</li></ul>
-          <p class="skill-sub">Infra / CI</p>
-          <ul class="chips lg"><li>AWS</li><li>Docker</li><li>Jenkins</li></ul>
+          <h3><span class="k">Database</span></h3>
+          <ul class="chips lg"><li class="hi">Oracle</li><li class="hi">PostgreSQL</li><li>MySQL</li><li>MariaDB</li><li class="hi">Tibero</li><li>ODBC</li></ul>
         </article>
         <article class="card skill-card reveal" data-delay="2">
-          <h3><span class="k">Frontend</span></h3>
-          <ul class="chips lg"><li>React</li><li>Next.js</li></ul>
+          <h3><span class="k">Systems & Network</span></h3>
+          <ul class="chips lg"><li class="hi">Linux</li><li class="hi">Unix</li><li>AIX</li><li>TCP Socket</li><li>Binary Protocol</li><li>Batch</li></ul>
         </article>
         <article class="card skill-card reveal" data-delay="3">
-          <h3><span class="k">AI</span></h3>
-          <ul class="chips lg"><li>Claude Code</li><li>Codex</li></ul>
+          <h3><span class="k">Infra & Tooling</span></h3>
+          <ul class="chips lg"><li class="hi">AWS</li><li>Docker</li><li>Jenkins</li><li>Claude Code</li><li>Codex</li><li>React</li><li>Next.js</li></ul>
         </article>
       </div>
     </div>
@@ -374,7 +284,7 @@
   <section id="education" class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="sec-num">04</span>
+        <span class="sec-num">03</span>
         <h2>Education &amp; Certificates</h2>
         <p class="sec-sub">학력 · 교육 · 자격증</p>
       </div>
@@ -387,7 +297,7 @@
               <span class="tag tag-live"><span class="pulse"></span>2026.07 ~ 진행중</span>
             </div>
             <ul class="bullets">
-              <li>삼성전자가 운영하는 SW·AI 집중 교육 과정으로, 알고리즘 및 Java 기반 웹 개발 교육과 팀 프로젝트를 수행</li>
+              <li>삼성전자가 운영하는 SW·AI 집중 교육 과정. 알고리즘 및 Java 기반 웹 개발 교육과 팀 프로젝트 수행</li>
             </ul>
           </article>
 
@@ -398,7 +308,7 @@
             </div>
             <ul class="bullets">
               <li>우리카드 데이터를 활용해 AWS 환경에서 Spring 기반 웹 서비스 교육</li>
-              <li>우수 수료생으로 선정</li>
+              <li>우수 수료생 선정</li>
             </ul>
           </article>
 
@@ -417,10 +327,10 @@
               자격증
             </h3>
             <ul class="cert-list">
-              <li><span class="cert-name">AWS SAA-C03</span><span class="cert-date">2026.07.22</span></li>
-              <li><span class="cert-name">ADsP</span><span class="cert-date">2026.06.05</span></li>
-              <li><span class="cert-name">정보처리기사</span><span class="cert-date">2024.09.10</span></li>
-              <li><span class="cert-name">SQLD</span><span class="cert-date">2024.06.21</span></li>
+              <li><span class="cert-name">AWS Solutions Architect – Associate (SAA-C03)</span><span class="cert-date">2026.07</span></li>
+              <li><span class="cert-name">ADsP</span><span class="cert-date">2026.06</span></li>
+              <li><span class="cert-name">정보처리기사</span><span class="cert-date">2024.09</span></li>
+              <li><span class="cert-name">SQLD</span><span class="cert-date">2024.06</span></li>
             </ul>
           </div>
         </div>
@@ -434,10 +344,9 @@
   <div class="wrap footer-inner">
     <span>© 2026 안찬웅 · AnChanUng</span>
     <div class="footer-links">
-      <a href="assets/resume_anchanung.pdf" target="_blank" rel="noopener" class="to-top">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7.5 10.5 12 15l4.5-4.5M4 20h16"/></svg>
-        이력서 PDF
-      </a>
+      <a href="https://github.com/AnChanUng" target="_blank" rel="noopener" class="to-top">GitHub</a>
+      <a href="https://cookie.tistory.com/" target="_blank" rel="noopener" class="to-top">Blog</a>
+      <a href="assets/resume_anchanung.pdf" target="_blank" rel="noopener" class="to-top">Resume PDF</a>
       <a href="#top" class="to-top">
         맨 위로
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
